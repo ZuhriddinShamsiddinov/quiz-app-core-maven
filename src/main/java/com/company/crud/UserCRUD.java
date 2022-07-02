@@ -90,7 +90,4 @@ public class UserCRUD {
         USER_SERVICE.teacherList();
     }
 
-    public void revokeRole() {
-        USER_SERVICE.revokeRole();
-    }
 }

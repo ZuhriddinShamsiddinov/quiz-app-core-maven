@@ -109,13 +109,11 @@ public class AdminMenu {
     private static void teacherCRUD() {
         BaseUtils.println("Set Role  ->  1");
         BaseUtils.println("Teacher List ->  2");
-        BaseUtils.println("Remove from Teacher ->  3");
         BaseUtils.println("Back ->  0");
         String choice = BaseUtils.readText("Enter choice : ");
         switch (choice) {
             case "1" -> USER_CRUD.setRole();
             case "2" -> USER_CRUD.teacherList();
-            case "3" -> USER_CRUD.revokeRole();
             case "0" -> USER_CRUD.logout();
         }
         teacherCRUD();

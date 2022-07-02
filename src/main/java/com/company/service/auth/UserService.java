@@ -1,23 +1,22 @@
 package com.company.service.auth;
 
 import com.company.config.PasswordConfigurer;
+import com.company.dao.auth.UserDAO;
 import com.company.dao.detail.SubjectDAO;
 import com.company.dto.auth.UserCreateDTO;
 import com.company.dto.auth.UserLoginDTO;
 import com.company.dto.auth.UserUpdateDTO;
 import com.company.enums.Language;
+import com.company.enums.Position;
 import com.company.mapper.ApplicationContextHolder;
+import com.company.models.auth.User;
 import com.company.models.detail.Subject;
 import com.company.ui.UI;
-import com.company.dao.auth.UserDAO;
-import com.company.enums.Position;
-import com.company.models.auth.User;
 import com.company.utils.BaseUtils;
 import com.company.utils.Colors;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
-import javax.management.relation.Role;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -106,9 +105,7 @@ public class UserService {
         }
     }
 
-    public void revokeRole() {
 
-    }
 
     public static UserService getInstance() {
         if (Objects.isNull(instance)) {
